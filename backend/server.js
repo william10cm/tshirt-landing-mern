@@ -25,9 +25,3 @@ mongoose
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
   .catch((err) => console.error("Mongo connection error:", err));
-
-  //Your current IP address (107.77.226.65)
-  //wac11mendoza_db_user
-  //pS5KQ5D5yzERMFwF
-
-  //mongodb+srv://wac11mendoza_db_user:pS5KQ5D5yzERMFwF@cluster0.u4jheuk.mongodb.net/?appName=Cluster0
