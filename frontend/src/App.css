@@ -1,0 +1,74 @@
+.app-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fff8f2 0%, #fff 48%, #f4f7fb 100%);
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 22px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.app-brand {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-link {
+  text-decoration: none;
+  color: #3b3b3b;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.app-link:hover {
+  background: #f6f6f6;
+}
+
+.app-cart-btn {
+  text-decoration: none;
+  color: #222;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.app-badge {
+  display: inline-block;
+  min-width: 26px;
+  text-align: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.app-footer {
+  padding: 22px;
+  text-align: center;
+  color: #4b5563;
+}

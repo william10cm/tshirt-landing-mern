@@ -1,0 +1,137 @@
+.cart-page-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 22px;
+}
+
+.cart-page-title {
+  margin-top: 0;
+}
+
+.cart-page-empty {
+  color: #4b5563;
+}
+
+.cart-page-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-page-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 14px;
+}
+
+.cart-page-thumb {
+  width: 74px;
+  height: 74px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cart-page-item-main {
+  flex: 1;
+}
+
+.cart-page-item-name {
+  font-weight: 800;
+}
+
+.cart-page-item-price {
+  color: #4b5563;
+}
+
+.cart-page-qty-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cart-page-qty-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+}
+
+.cart-page-qty {
+  min-width: 24px;
+  text-align: center;
+}
+
+.cart-page-remove-btn {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.cart-page-item-total {
+  font-weight: 800;
+}
+
+.cart-page-footer {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #eee;
+}
+
+.cart-page-total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.cart-page-total-label,
+.cart-page-total-value {
+  font-weight: 800;
+}
+
+.cart-page-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cart-page-clear-btn {
+  flex: 1;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.cart-page-checkout-btn {
+  flex: 1;
+  border: none;
+  background: #111827;
+  color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .cart-page-item {
+    flex-wrap: wrap;
+  }
+
+  .cart-page-item-total {
+    width: 100%;
+    text-align: right;
+  }
+
+  .cart-page-actions {
+    flex-direction: column;
+  }
+}

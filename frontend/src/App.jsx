@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ProductDetails from "./pages/ProductDetails";
+import "./App.css";
 
 
 import Home from "./pages/Home";
@@ -32,7 +33,7 @@ export default function App() {
   useEffect(() => {
     async function load() {
       try {
-        const res = await axios.get("http://localhost:5000/api/products");
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/products`);
         setProducts(res.data);
       } catch (e) {
         setError("Could not load products. Is backend running on port 5000?");
@@ -58,14 +59,14 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div style={styles.page}>
-        <header style={styles.header}>
-          <Link to="/" style={styles.brand}>TeeShop</Link>
+      <div className="app-page">
+        <header className="app-header">
+          <Link to="/" className="app-brand">TeeShop</Link>
 
-          <nav style={styles.nav}>
-            <Link to="/" style={styles.link}>Home</Link>
-            <Link to="/cart" style={styles.cartBtn}>
-              🛒 Cart <span style={styles.badge}>{cartCount}</span>
+          <nav className="app-nav">
+            <Link to="/" className="app-link">Home</Link>
+            <Link to="/cart" className="app-cart-btn">
+              🛒 Cart <span className="app-badge">{cartCount}</span>
             </Link>
           </nav>
         </header>
@@ -93,47 +94,8 @@ export default function App() {
           />
         </Routes>
 
-        <footer style={styles.footer}>© {new Date().getFullYear()} TeeShop</footer>
+        <footer className="app-footer">© {new Date().getFullYear()} TeeShop</footer>
       </div>
     </BrowserRouter>
   );
 }
-
-const styles = {
-  page: { fontFamily: "system-ui, Arial", background: "#fafafa", minHeight: "100vh" },
-  header: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "16px 22px",
-    background: "#fff",
-    borderBottom: "1px solid #eee",
-    position: "sticky",
-    top: 0
-  },
-  brand: { fontWeight: 900, letterSpacing: 0.5, textDecoration: "none", color: "inherit" },
-  nav: { display: "flex", gap: 10, alignItems: "center" },
-  link: { textDecoration: "none", color: "inherit", opacity: 0.85 },
-  cartBtn: {
-    textDecoration: "none",
-    color: "inherit",
-    border: "1px solid #eee",
-    background: "#fff",
-    padding: "10px 12px",
-    borderRadius: 12,
-    display: "flex",
-    alignItems: "center",
-    gap: 8
-  },
-  badge: {
-    display: "inline-block",
-    minWidth: 26,
-    textAlign: "center",
-    padding: "2px 8px",
-    borderRadius: 999,
-    background: "#111",
-    color: "#fff",
-    fontSize: 12
-  },
-  footer: { padding: 22, textAlign: "center", opacity: 0.6 }
-};
