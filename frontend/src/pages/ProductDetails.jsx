@@ -14,7 +14,7 @@ export default function ProductDetails({ onAdd }) {
     async function load() {
       try {
         setLoading(true);
-        const res = axios.get(`${import.meta.env.VITE_API_URL}/api/products/${id}`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/products/${id}`);
         setProduct(res.data);
       } catch (e) {
         setError("Could not load product details.");
